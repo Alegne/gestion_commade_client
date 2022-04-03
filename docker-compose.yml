@@ -2,7 +2,6 @@ version: "3.2"
 services:
 
   mysql_db:
-    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: gestion_commande
       MYSQL_USER: client
