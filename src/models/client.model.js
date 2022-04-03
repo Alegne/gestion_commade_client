@@ -37,7 +37,7 @@ Client.getClientID = (id, result) => {
 
 //Ajouter un client
 Client.postClient = (reqClientData, result) => {
-    dbConn.query('INSERT INTO Client SET ?', reqClientData, (res, err) => {
+    dbConn.query('INSERT INTO Client SET ?', reqClientData, (err, res) => {
         if (err) {
             console.log("Erreur lors d'insertion d'un client");
             result(null, err)
@@ -49,7 +49,7 @@ Client.postClient = (reqClientData, result) => {
 
 //update un client
 Client.updateClient = (id, reqClientData, result) => {
-    dbConn.query('UPDATE Client SET nom=?, adresse=?, cin=?, phone=?, update_at=? WHERE id=?', [reqClientData.nom, reqClientData.adresse, reqClientData.cin, reqClientData.phone, reqClientData.update_at , id], (res, err) => {
+    dbConn.query('UPDATE Client SET nom=?, adresse=?, cin=?, phone=?, update_at=? WHERE id=?', [reqClientData.nom, reqClientData.adresse, reqClientData.cin, reqClientData.phone, reqClientData.update_at , id], (err, res) => {
         if (err) {
             console.log("Erreur lors de la mise à jour d'un client");
             result(null, err)

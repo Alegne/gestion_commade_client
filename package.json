@@ -1,7 +1,7 @@
 {
-  "name": "gestion_commande_nodejs",
+  "name": "client_gc_nodejs",
   "version": "1.0.0",
-  "description": "Node mysql crud gestion commande",
+  "description": "Node mysql crud client gestion commande",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
