@@ -1,11 +1,12 @@
 const mysql = require('mysql')
+const dotenv = require('dotenv')
 
-var mysql_host = process.env.DB_HOST || 'localhost'
-var mysql_port = process.env.DB_PORT || '3306'
-var mysql_DB = process.env.DB_NAME || 'gestion_commande'
-var mysql_user = process.env.DB_USER || 'root'
-var mysql_password = process.env.DB_PASSWORD || ''
-
+dotenv.config()
+var mysql_host = process.env.DB_HOST
+var mysql_port = process.env.DB_PORT
+var mysql_DB = process.env.DB_NAME
+var mysql_user = process.env.DB_USER
+var mysql_password = process.env.DB_PASSWORD
 //creation mysql connexion
 const dbconn = mysql.createConnection({
     host: mysql_host,
