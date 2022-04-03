@@ -6,7 +6,7 @@ services:
       MYSQL_DATABASE: gestion_commande
       MYSQL_USER: client
       MYSQL_PASSWORD: client
-      MYSQL_ROOT_PASSWORD: client
+      MYSQL_ROOT_PASSWORD: azerty1234
     volumes:
       - ./dbInit/init.sql:/docker-entrypoint-initdb.d/0_init.sql
       - $HOME/database/client/:/var/lib/mysql
