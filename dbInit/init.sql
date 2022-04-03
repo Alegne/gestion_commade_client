@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS `gestion_commande` /*!40100 DEFAULT CHARACTER SET 
 USE `gestion_commande`;
 
 -- Listage de la structure de la table gestion_commande. client
-CREATE TABLE IF NOT EXISTS `client` (
+CREATE TABLE IF NOT EXISTS `Client` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   `adresse` varchar(50) COLLATE utf8_bin DEFAULT NULL,

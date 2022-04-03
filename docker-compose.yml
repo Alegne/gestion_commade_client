@@ -22,13 +22,13 @@ services:
       - client_network
 
 
-  node_api:
+  node_api_client:
     restart: unless-stopped
     depends_on:
       - mysql_db
     container_name: client_api_GC
     build: .
-    image: node_api:v1
+    image: node_api_client:v1
     ports:
       - 3000:3000
     expose:
